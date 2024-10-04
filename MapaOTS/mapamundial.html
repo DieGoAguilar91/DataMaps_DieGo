@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌎 Mapa Mundial</title>
+        <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/datamaps.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark text-white">
+  <div class="container-fluid">
+   <a class="navbar-brand" href="mapamundial.html">
+      <img src="../images/logo.png" alt="" width="60"  class="d-inline-block align-text-top">
+    </a>
+    <h6 class=" col-3 col-sm-4 col-md-3 ">
+        Biblioteca DataMaps
+    </h6>
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+                <a class="nav-link " href="../index.html">Inicio</a>
+            </li>
+        <li class="nav-item">
+           <a class="nav-link active" href="mapamundial.html">Mapa Mundial</a>
+        </li>
+        <li class="nav-item">
+           <a class="nav-link " href="mapanacional.html">Mapa Nacional (Colombia)</a>
+        </li>
+        <li class="nav-item">
+           <a class="nav-link " href="cambiodemapas.html">Cambio de Mapas</a>
+        </li>
+        <li class="nav-item">
+           <a class="nav-link " target="_blank" href="https://datamaps.github.io">Documentacion DataMaps</a>
+        </li>
+       <!--  <li class="nav-item">
+           <a class="nav-link " target="_blank" href="https://diegoaguilar91.github.io/DieGo-Dev">Portafolio DieGo_Dev</a>
+        </li> -->
+      
+      </ul>
+
+        <form class="d-flex">
+          <a class="btn btn-light" href="#">Formulario de Contacto</a>
+        </form>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+    <h2 class="mt-3" style="border-left: 4px solid rgb(24, 187, 65); padding-left: 10px;">Mapa de Mundial con Datamaps </h2>
+
+        <div class="container d-flex justify-content-center mt-1">
+        
+        <div id="container1" style=" width: 700px;"></div>
+        <script src="../datamaps/src/js/components/d3/d3.min.js"></script>
+        <script src="../datamaps/src/js/components/topojson/topojson.js"></script>
+        <script src="../datamaps/dist/datamaps.world.js"></script>
+        <script src="../js/mapamundial.js"></script>
+    </div>
+    <div class="container" style="padding-left: 50px;">
+        <div class="row d-flex justify-content-center">
+            <div class="col-12 mt-1">
+                <h4><b>Estructura HTML</b></h4> 
+                <p> El contenedor para el mapa con un ancho y alto especificados.</p>
+            </div>
+            <div class="col-12 col-sm-12 col-md-7 col-lg-7 ">
+                <img src="../images/mundial/code1.png" alt="" class="w-100 ">
+            </div>
+
+            <div class="col-12 mt-1">
+                <h4><b>Etiquetas Script</b></h4> 
+                <p> Incluye la biblioteca D3, TopoJSON, DataMaps y el
+                    Script externo con el código de inicialización del mapa
+                </p>
+            </div>
+            <div class="col-12 col-sm-12 col-md-7 col-lg-7 ">
+                <img src="../images/mundial/code2.png" alt="" class="w-100 ">
+            </div>
+            
+            <div class="col-12 mt-1">
+                <h4><b>Contenido de mapamundial.js</b></h4> 
+                <p> ⚔️ Datos de ejemplo <b>(series)</b> que representan países y sus valores correspondientes. <br>
+                    ⚔️ Objeto <b>dataset</b> que almacena los datos formateados para el mapa. <br>
+                    ⚔️ Extraer los valores mínimo y máximo de la <b>series</b>. <br>
+                    ⚔️ Crear una función de paleta de colores <b>(paletteScale)</b> basada en el rango de datos. <br>
+                    ⚔️ Formatear el <b>dataset </b> usando la función de paleta. <br>
+                    ⚔️ Inicializar el <b>DataMap</b> con configuraciones: <br>
+                    <ul>
+                        <li><b>element</b>: Elemento div objetivo.</li>
+                        <li><b>projection</b>: Tipo de proyección del mapa.</li>
+                        <li><b>fills</b>: Color de relleno predeterminado para países no presentes en el dataset.</li>
+                        <li><b>geographyConfig</b>: Configuración para elementos geográficos incluyendo bordes, efectos de hover y tooltips.</li>
+                    </ul>
+
+                </p>
+            </div>
+            <div class="col-12 col-sm-12 col-md-7 col-lg-7 ">
+                <img src="../images/mundial/code3.png" alt="" class="w-100 p-3">
+            </div>
+
+            <div class="col-12 mt-1">
+                <h4><b>Instalación de DataMaps</b></h4> 
+                <p> 
+                    Para usar DataMaps, puedes descargarlo o incluirlo a través de un CDN (desde la Terminal): <br>
+                    <b>Descarga:</b> <br>
+                    <ul>
+                        <li><b>1. GitHub:</b> Descarga desde el <a href="https://github.com/markmarkoh/datamaps?formCode=MG0AV3">repositorio de DataMaps en GitHub.</a> </li>
+                        <li><b>2. NPM/Yarn:</b>  Instalar vía npm o yarn</li>
+                    </ul>
+                </p>
+            </div>
+            <div class="col-12 col-sm-12 col-md-4 col-lg-4 ">
+                <img src="../images/mundial/code4.png" alt="" class="w-100 ">
+                
+            </div>
+            <div class="col-12 mt-1">
+                <h4><b>CDN</b></h4> 
+                <p> 
+                    Puedes Incluir los las librerias de manera remota atraves de los siguientes Scripts
+                </p>
+            </div>
+            <div class="col-12 col-sm-12 col-md-8 col-lg-8 ">
+                <img src="../images/mundial/code5.png" alt="" class="w-100 ">
+                
+            </div>
+            
+            
+        </div>
+        
+    </div>
+    </div>
+<footer class="bd-footer py-2 mt-4 bg-dark text-white">
+  <div class="container py-2">
+    <div class="row">
+      <div class="col-12 col-sm-12 col-md-3 col-lg-3 mb-3">
+        <a class="d-inline-flex align-items-center mb-2 text-white text-decoration-none" href="/" aria-label="Bootstrap">
+          <img src="../images/logo.png" width="60" class="d-block me-2" alt="">
+          <span class="fs-6"> Biblioteca DataMaps <br>Javascript usando D3.js</span>
+        </a>
+
+      </div>
+      <div class="col-12 col-sm-12 col-md-9 col-lg-9">
+        <h5>DataMaps</h5>
+        <p>
+            DataMaps es una biblioteca de visualización de datos que permite la creación de mapas interactivos utilizando SVG (Scalable Vector Graphics) en la web. Se basa en D3.js, una de las bibliotecas más populares para la manipulación de documentos basados en datos. Esto le otorga a DataMaps una gran flexibilidad y potencia, facilitando la visualización de datos geoespaciales de manera clara y atractiva.
+        </p>
+      </div>
+      <div class="col-12">
+        <script>
+            function mostrarAnioActual() {
+                const anioActual = new Date().getFullYear();
+                document.getElementById('copyright').innerHTML = `©${anioActual} DieGo_Dev91, Inc. Todos los derechos reservados.`;
+            }
+
+            // Llama a la función cuando la página se haya cargado completamente
+            window.onload = mostrarAnioActual;
+        </script>
+        <h6 id="copyright"></h6>   
+      </div>
+    </div>
+   
+</footer>
+    
+    
+      
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+</body>
+</html>
+

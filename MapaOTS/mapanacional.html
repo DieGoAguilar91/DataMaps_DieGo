@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌎 Mapa Nacional</title>
+        <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/datamaps.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark text-white">
+        <div class="container-fluid ">
+            <a class="navbar-brand" href="mapamundial.html">
+                <img src="../images/logo.png" alt="" width="60" class="d-inline-block align-text-top">
+            </a>
+        <h6 class=" col-3 col-sm-4 col-md-3 ">
+            Biblioteca DataMaps
+        </h6>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link " href="../index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="mapamundial.html">Mapa Mundial</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="mapanacional.html">Mapa Nacional (Colombia)</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="cambiodemapas.html">Cambio de Mapas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " target="_blank" href="https://datamaps.github.io">Documentacion
+                            DataMaps</a>
+                    </li>
+                    <!--  <li class="nav-item">
+           <a class="nav-link " target="_blank" href="https://diegoaguilar91.github.io/DieGo-Dev">Portafolio DieGo_Dev</a>
+        </li> -->
+
+                </ul>
+
+                <form class="d-flex">
+                    <a class="btn btn-light" href="#">Formulario de Contacto</a>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h2 class="mt-3" style="border-left: 4px solid rgb(24, 187, 65); padding-left: 10px;">Mapa Nacional con Datamaps
+        </h2>
+
+        <div class="container d-flex justify-content-center mt-1" >
+
+            <div id="mapanacional">
+                <div id="container2" style="width: 700px; height: 475px; position: relative;"></div>
+                <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.3/d3.min.js"></script>
+                <script src="//cdnjs.cloudflare.com/ajax/libs/topojson/1.6.9/topojson.min.js"></script>
+                <script src="//cdnjs.cloudflare.com/ajax/libs/datamaps/0.5.8/datamaps.col.js"></script>
+                <script src="../js/mapanacional.js"></script>
+            </div>
+        </div>
+        <div class="container" style="padding-left: 50px;">
+            <div class="row d-flex justify-content-center">
+                <div class="col-12 mt-1">
+                    <h4><b>Estructura HTML </b></h4>
+                    <p>
+                        <b>DOCTYPE y HTML:</b> Se declara el tipo de documento y se establece el idioma de la página.
+                        <br>
+                        <b>Meta Tags:</b> Se define la codificación de caracteres y se ajusta la vista para dispositivos
+                        móviles. <br>
+                        <b>Title:</b> Se establece el título que aparecerá en la pestaña del navegador. <br>
+                        <b>Bootstrap: </b> Se incluye Bootstrap para el diseño básico y la estructura responsiva. <br>
+                        <b>Container:</b> Se crea un contenedor donde se dibuja el mapa, con dimensiones específicas y
+                        un borde.
+                    </p>
+                </div>
+                <div class="col-12 col-sm-12 col-md-7 col-lg-7 ">
+                    <img src="../images/nacional/code.png" alt="" class="w-100 ">
+                </div>
+
+                <div class="col-12 mt-1">
+                    <h4><b>Etiquetas Script</b></h4>
+                    <p> <b>D3.js:</b> Se carga la biblioteca D3.js, que es fundamental para la manipulación de datos y
+                        gráficos SVG. <br>
+                        <b>TopoJSON:</b> Se carga TopoJSON, que es un formato para representar datos geográficos y se
+                        utiliza para crear mapas. <br>
+                        <b>DataMaps:</b>Se carga la biblioteca DataMaps, que facilita la creación de mapas interactivos.
+                    </p>
+                </div>
+                <div class="col-12 col-sm-12 col-md-7 col-lg-7 ">
+                    <img src="../images/nacional/code2.png" alt="" class="w-100 ">
+                </div>
+
+                <div class="col-12 mt-1">
+                    <h4><b>Contenido de mapanacional.js</b></h4>
+                    <p>
+                        <b>Serie de Datos:</b> Se define un array series que contiene pares de valores. Cada par
+                        representa un departamento de Colombia
+                        con su respectivo código ISO y un número que podría representar, por ejemplo, la cantidad de
+                        colaboradores.
+                    </p>
+                </div>
+                <div class="col-12 col-sm-12 col-md-7 col-lg-7 ">
+                    <img src="../images/nacional/code3.png" alt="" class="w-100 ">
+                </div>
+
+                <div class="col-12 mt-2">
+                    <h4><b>Creación del Dataset</b></h4>
+                    <p>
+                        <b>Dataset: </b>
+                        Se inicializa un objeto vacío dataset donde se almacenarán los datos formateados para el mapa.
+                        <br>
+                        <b>Cálculo de Valores Mínimos y Máximos:</b> Se extraen los valores de la serie y se calcula el
+                        mínimo y máximo para definir el
+                        rango de colores. <br>
+                        <b>Escala de Color:</b> Se define una escala de color lineal con D3.js que asigna colores desde
+                        el más claro hasta el más
+                        oscuro basado en los valores. <br>
+                        <b>Llenado del Dataset:</b> Se itera sobre cada elemento de series y se llena dataset con la
+                        información estructurada que
+                        incluye el número de cosas y el color de relleno
+                    </p>
+                </div>
+                <div class="col-12 col-sm-12 col-md-7 col-lg-7">
+                    <img src="../images/nacional/code4.png" alt="" class="w-100 ">
+                </div>
+                <div class="col-12 mt-2">
+                    <h4><b>Configuración y Creación del Mapa</b></h4>
+                    <p>
+                    <b>Instanciación de DataMap:</b> Se crea una nueva instancia de Datamap, especificando el elemento HTML donde se renderizará el
+                    mapa y el ámbito geográfico (Colombia). <br>
+                   <b>Proyección:</b>  Se establece una proyección geográfica utilizando Mercator, centrando el mapa en las coordenadas específicas
+                    de Colombia y ajustando la escala. <br>
+                   <b>Datos:</b>  Se pasa el dataset previamente creado, que contiene la información para cada departamento.
+                    <b>Configuración de Geografía:</b> Se configuran opciones como el color del borde, el comportamiento al resaltar regiones y la
+                    plantilla del popup que se muestra al interactuar con el mapa. El popup muestra el nombre de la región y el número de
+                    colaboradores
+                    </p>
+                </div>
+                <div class="col-12 col-sm-12 col-md-7 col-lg-7 ">
+                    <img src="../images/nacional/code5.png" alt="" class="w-100 ">
+                </div>
+
+                <div class="col-12 mt-3">
+                    <h4><b>Comentarios y Opciones Adicionales</b></h4>
+                    <p>
+                        <b>Comentarios:</b>
+                        Se incluye un comentario sobre la opción de mostrar etiquetas para los nombres de los departamentos. Esta
+                        línea está comentada, pero podría descomentarse para mostrar etiquetas en el mapa.
+                    </p>
+                </div>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 ">
+                    <img src="../images/nacional/code6.png" alt="" class="w-100 ">
+                
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+    <footer class="bd-footer py-2 mt-4 bg-dark text-white">
+        <div class="container py-2">
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-3 col-lg-3 mb-3">
+                    <a class="d-inline-flex align-items-center mb-2 link-light text-decoration-none" href="/"
+                        aria-label="">
+                        <img src="../images/logo.png" width="60" class="d-block me-2" alt="">
+                        <span class="fs-6"> Biblioteca DataMaps <br>Javascript usando D3.js</span>
+                    </a>
+
+                </div>
+                <div class="col-12 col-sm-12 col-md-9 col-lg-9">
+                    <h5>DataMaps</h5>
+                    <p>
+                        DataMaps es una biblioteca de visualización de datos que permite la creación de mapas
+                        interactivos utilizando SVG (Scalable Vector Graphics) en la web. Se basa en D3.js, una de las
+                        bibliotecas más populares para la manipulación de documentos basados en datos. Esto le otorga a
+                        DataMaps una gran flexibilidad y potencia, facilitando la visualización de datos geoespaciales
+                        de manera clara y atractiva.
+                    </p>
+                </div>
+                <div class="col-12">
+                    <script>
+                        function mostrarAnioActual() {
+                            const anioActual = new Date().getFullYear();
+                            document.getElementById('copyright').innerHTML = `©${anioActual} DieGo_Dev91, Inc. Todos los derechos reservados.`;
+                        }
+
+                        // Llama a la función cuando la página se haya cargado completamente
+                        window.onload = mostrarAnioActual;
+                    </script>
+                    <h6 id="copyright"></h6>
+                </div>
+            </div>
+
+    </footer>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
