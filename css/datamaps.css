@@ -19,13 +19,13 @@ body{
 }
 
 /* Image styles */
-img {
+.img-code img {
     max-width: 100%;
     height: auto;
     transition: transform 0.3s ease-in-out;
 }
 
-img:hover {
+.img-code img:hover {
     transform: scale(1.05);
 }
 
